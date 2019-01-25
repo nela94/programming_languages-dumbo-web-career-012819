@@ -3,9 +3,9 @@ def reformat_languages(languages)
   languages.each do |key, value|
     value.each do |language, info|
       if new_hash.key?(language)
-             new_hash[language][:style] << key
+         new_hash[language][:style] << key
       else
-            new_hash[language] = info.merge!({:style => [key]})
+          new_hash[language] = info.merge!({:style => [key]})
       end
     end
   end
